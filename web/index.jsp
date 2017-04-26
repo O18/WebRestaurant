@@ -16,12 +16,13 @@
     <title>$Title$</title>
   </head>
   <body>
+  <% Locale.setDefault(Locale.ENGLISH); %>
   <sql:setDataSource var="ds" url="jdbc:oracle:thin:@localhost:1521:XE"
                      driver="oracle.jdbc.OracleDriver"
                      user="nc" password="1"
   />
   <sql:query var="selection" dataSource="${ds}">
-    SELECT * from DISH;
+    SELECT * FROM DISH
   </sql:query>
   <p>Список блюд</p>
   <table border="1" width="100%">
